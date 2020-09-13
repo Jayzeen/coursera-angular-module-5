@@ -1,0 +1,101 @@
+.loading-indicator {
+    display: block;
+    width: 70px;
+    position: fixed;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    top: 40%;
+    z-index: 100;
+    background-color: #FFF;
+}
+
+.loading-indicator img {
+    width: 70px;
+    background-color: #FFF;
+}
+
+.ui-view-placeholder {
+    margin-top: 60px;
+}
+
+.myInfo {
+  font-size: 10px;
+}
+
+.square{
+  height: 150px;
+  width: 1px;
+  background-color: white;
+}
+.col-sm-2{
+  width: 0;
+}
+
+.menu-info-photo {
+  margin-right: auto;
+}
+.menu-info-photo {
+  position: relative;
+  border: 2px solid #3F0C1F;
+  overflow: hidden;
+  padding: 0;
+  margin-right: -15px;
+  margin-left: auto;
+  margin-bottom: 20px;
+  max-width: 250px;
+}
+.menu-info-photo div {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 80px;
+  background-color: #557c3e;
+  text-align: center;
+}
+
+.menu-info-description {
+  padding-right: 30px;
+  text-align:left;
+}
+h3.menu-info-title {
+  margin: 0 0 10px;
+  font-size: 1.6em;
+}
+.menu-info-details {
+  font-size: 0.8em;
+  font-style: italic;
+}
+.info {
+  font-family: 'Oxygen', sans-serif;
+}
+.menu-info-tile {
+  padding-top: 40px;
+}
+.row {
+  padding-top: 15px;
+}
+.notRegistered {
+  font-size: 1.5em;
+  text-align: center;
+}
+.confirmationMessage {
+  padding-top: 35px;
+  text-align: center;
+  color:  white;
+  font-weight: bold;
+  font-size: 1em;
+}
+
+.errorMsg {
+  color: #cccccc;
+}
+
+.linkToSignUp {
+  color: white;
+  text-decoration: none;
+}
+.linkToSignUp:hover {
+  color: green;
+  text-decoration: none;
+}

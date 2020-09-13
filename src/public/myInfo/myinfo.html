@@ -1,0 +1,50 @@
+<div class="container">
+  <h2 class="text-center">My Info</h2>
+
+  <div class="menu-item-tile col-md-12">
+    <div class="menu-info-tile">
+    <div class="row" ng-repeat="info in MyInfoCtrl.user">
+      <div class="col-sm-4">
+        <div class="menu-info-photo" ng-if="info.favouriteItem.short_name!=null">
+          <div>{{info.favouriteItem.short_name}}</div>
+          <img class="img-responsive" width="250" height="150"
+                ng-src="https://myrestwebsite.herokuapp.com/images/{{info.favouriteItem.short_name}}.jpg"
+                alt="notFound">
+        </div>
+        <div class="menu-info-photo" ng-if="info.favouriteItem.short_name==null">
+          <div>{{info.favouriteItem.short_name}}</div>
+          <img class="img-responsive" width="250" height="150"
+                ng-src="images/notFound.png"
+                alt="notFound">
+        </div>
+      </div>
+
+      <div class="menu-info-description col-sm-3">
+        <h3 class="menu-info-title">{{info.favouriteItem.name}}</h3>
+        <p class="menu-info-details">{{info.favouriteItem.description}}</p>
+      </div>
+      <div class="col-sm-2">
+        <div class="square"></div>
+      </div>
+      <div class="col-sm-3">
+        <div class="info">
+          <label>First Name : </label>  {{info.firstName}}<br />
+          <label>Last Name : </label>{{info.lastName}}<br />
+          <label>Email : </label>  {{info.email}}<br />
+          <label>MobileNo : </label>{{info.MobileNo}}<br>
+          <label>Favourite Item : </label>{{info.favouriteItem.name}}<br>
+          <br><br>
+        </div>
+      </div>
+
+    </div>
+    <hr class="visible-xs">
+  </div>
+ </div>
+
+ <div class="notRegistered" ng-if=MyInfoCtrl.user.length===0>
+  Not Signed Up Yet. <a class="linkToSignUp" ui-sref="public.signup">Sign up Now!</a><br><br>
+  <button type="button" class="button" ui-sref="public.signup"><span>Register Now</span></button>
+  </div>
+
+</div>

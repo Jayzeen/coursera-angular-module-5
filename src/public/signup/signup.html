@@ -1,0 +1,86 @@
+<div class="container">
+
+      <div class="page-wrapper bg-red p-t-180 p-b-100 font-robo">
+          <div class="wrapper wrapper--w960">
+              <div class="card card-2">
+                  <div class="card-heading"></div>
+                  <div class="card-body">
+                      <h2 class="title">Create New Account</h2>
+                      <form name='regForm' novalidate>
+
+                          <div class="input-group">
+                              <input class="input--style-2" type="text" placeholder="Enter First Name" name="firstName"
+                                      ng-model="signupCtrl.user.firstName"
+                                      required
+                                      minlength="4"
+                                      ng-maxlength="10">
+                                      <span class="errorMsg" ng-if="regForm.firstName.$error.minlength">
+                                        Use at least 4 characters
+                                      </span>
+                                      <span class="errorMsg" ng-if="regForm.firstName.$error.maxlength">
+                                        maximum characters exceeded (10)
+                                      </span>
+                                      <span class="errorMsg" ng-if="regForm.firstName.$touched && regForm.firstName.$error.required">
+                                        First Name can't be blank
+                                      </span>
+                          </div>
+
+                          <div class="input-group">
+                              <input class="input--style-2" type="text" placeholder="Enter Last Name" name="lastName"
+                                      ng-model="signupCtrl.user.lastName"
+                                      required
+                                      minlength="4"
+                                      ng-maxlength="10">
+                                      <span class="errorMsg" ng-if="regForm.lastName.$error.minlength">
+                                        Use at least 4 characters
+                                      </span>
+                                      <span class="errorMsg" ng-if="regForm.lastName.$error.maxlength">
+                                        maximum characters exceeded (10)
+                                      </span>
+                                      <span class="errorMsg" ng-if="regForm.lastName.$touched && regForm.lastName.$error.required">
+                                         Last Name can't be blank
+                                      </span>
+                          </div>
+
+                          <div class="input-group">
+                              <input class="input--style-2" type="email" placeholder="Enter Email" name="email"
+                                      ng-model="signupCtrl.user.email"
+                                      required>
+                                      <span class="errorMsg" ng-if="regForm.email.$touched && regForm.email.$invalid">
+                                        Must be a valid email address: handle@domain format
+                                      </span>
+                          </div>
+
+                          <div class="input-group">
+                              <input class="input--style-2" type="text" placeholder="###-###-####" name="MobileNo"
+                                      ng-model="signupCtrl.user.MobileNo"
+                                      pattern="(\d{3})-(\d{3})-(\d{4})"
+                                      required>
+                                      <span class="errorMsg" ng-if="regForm.MobileNo.$error.required && regForm.MobileNo.$touched">
+                                        Phone must be in the format ###-###-####.
+                                      </span>
+                          </div>
+
+                          <div class="input-group">
+                              <input class="input--style-2" type="text" placeholder="ShortName Here" name="favouriteItem"
+                                      ng-model="signupCtrl.user.favouriteItem"
+                                      required>
+                                      <span class="errorMsg" ng-if="regForm.favouriteItem.$error.required && regForm.favouriteItem.$touched">
+                                        Enter ShortName Of Your Favorite Item
+                                      </span>
+                                      <span class="errorMsg" ng-if="signupCtrl.dish2">
+                                        No such menu number exists
+                                      </span>
+                          </div>
+
+                          <button type="submit"
+                                  class="button"
+                                  ng-disabled="regForm.$invalid"
+                                  ng-click="signupCtrl.submit()"><span>Submit</span></button>
+                            <div class="confirmationMessage" ng-if="signupCtrl.dish" >Your Information has been saved</div>
+                      </form>
+                  </div>
+              </div>
+          </div>
+      </div>
+</div>
